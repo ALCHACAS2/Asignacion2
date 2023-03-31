@@ -16,7 +16,7 @@ const {theme } = useTheme()
           backgroundColor: theme?.colors.gray100.value
       }}>
           <Image
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+              // src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
               alt="icono de la app"
               width={50}
         height={50}
