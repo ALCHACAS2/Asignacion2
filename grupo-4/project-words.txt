@@ -1,6 +1,7 @@
 abrir
 ANDERS
 buscar
+digite
 hola
 Ingresa
 Ingrese
