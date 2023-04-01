@@ -14,14 +14,14 @@ const HomePage: NextPage<Props> = ({ pokemons }) => {
   const [newPokemons, setNewPokemons] = useState<any>([]);
 
   return (
-    <>
+    <div>
       <Layout title="Listado de Pokémons">
         <Grid.Container gap={2} justify="flex-start"  data-testid={`principal-list`}>
           {pokemons && pokemons.map((pokemon) => <PokemonCard key={pokemon.id} pokemon={pokemon} />)}
           {newPokemons.length > 0 && newPokemons?.map((pokemon: SmallPokemon) => <PokemonCard key={pokemon.id} pokemon={pokemon} />)}
         </Grid.Container>
       </Layout>
-    </>
+    </div>
   );
 };
 
