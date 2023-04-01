@@ -1,7 +1,6 @@
 import { NextPage } from 'next';
 import { GetStaticPaths } from 'next';
 import { GetStaticProps } from 'next';
-import { PokemonPrincipalCard } from '../../../components/pokemon';
 import { Pokemon } from '../../../interfaces';
 import {   getStaticInformation } from '../../../utils';
 
@@ -9,14 +8,14 @@ interface PokemonProps {
   pokemon: Pokemon; 
 }
 const PokemonPage: NextPage<PokemonProps> = ({ pokemon }) => {
-  return <PokemonPrincipalCard pokemon={pokemon} />;
+  return <></>;
 };
 export const getStaticPaths: GetStaticPaths = async (_ctx) => {
-  const pokemons151 = [...Array(151)].map((_value, index) => {
+  const pokemons100 = [...Array(100)].map((_value, index) => {
     return { params: { id: `${index + 1}` } };
   });
   return {
-    paths: pokemons151,
+    paths: pokemons100,
     fallback: 'blocking',
   };
 };

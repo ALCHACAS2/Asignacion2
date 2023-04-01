@@ -1,6 +1,12 @@
+abrir
 ANDERS
+buscar
 hola
+Ingresa
+Ingrese
 Messagealert
 nextui
+página
 Pokemón
+pudo
 testid

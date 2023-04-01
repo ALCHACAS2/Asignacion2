@@ -27,7 +27,7 @@ const HomePage: NextPage<Props> = ({ pokemons }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (_ctx) => {
-  const limit = 151;
+  const limit = 100;
   const offset = 0;
 
   return {

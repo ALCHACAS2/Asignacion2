@@ -1,5 +1,6 @@
 import NextLink from "next/link";
 import { Spacer, Text, useTheme, Link } from "@nextui-org/react";
+import { Search } from "./searchPokemon";
 export const Navbar = () => {
   const { theme } = useTheme();
 
@@ -23,6 +24,7 @@ export const Navbar = () => {
         </Link>
       </NextLink>
       <Spacer css={{ flex: 1 }} />
+      <Search />
     </div>
   );
 };
