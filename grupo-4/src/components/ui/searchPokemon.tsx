@@ -1,14 +1,7 @@
 import React, { useRef, useState } from "react";
-import { PokemonListResponse } from "../../interfaces/pokemon-list";
-import { getStaticInformation } from "../../utils/getStaticInformation";
-import { PokemonPrincipalCard } from "../pokemon/PokemonPrincipalCard";
-import ReactDOM from "react-dom";
-import { Pokemon } from "../../interfaces";
 import { useRouter } from "next/router";
-import pokeApi from "../../utils/localFavorites";
 export const Search = () => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [newPokemons, setNewPokemons] = useState<any>([]);
   const router = useRouter();
   const handleClick = () => {
     const pokemonId = inputRef.current?.value;
