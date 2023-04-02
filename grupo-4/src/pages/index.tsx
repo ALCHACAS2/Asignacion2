@@ -13,6 +13,16 @@ interface Props {
 
 const HomePage: NextPage<Props> = ({ pokemons }) => {
   const [newPokemons, setNewPokemons] = useState<any>([]);
+  let isLoaded = false;
+  useEffect((): void => {
+    (async () => {
+      if (!isLoaded) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        isLoaded = true;
+        setNewPokemons(await pokeApi.getNewPokemonsSearched());
+      }
+    })();
+  }, []);
 
   return (
     <>

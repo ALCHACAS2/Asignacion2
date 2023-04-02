@@ -3,6 +3,7 @@ import { GetStaticPaths } from 'next';
 import { GetStaticProps } from 'next';
 import { Pokemon } from '../../../interfaces';
 import {   getStaticInformation } from '../../../utils';
+import  withData  from "../withGetStaticProps";
 
 interface PokemonProps {
   pokemon: Pokemon; 
@@ -19,6 +20,7 @@ export const getStaticPaths: GetStaticPaths = async (_ctx) => {
     fallback: 'blocking',
   };
 };
+const withPokemonByIdData = withData('id');
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { id: pokemonTermSearch } = params as { id: string };
@@ -26,4 +28,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return await getStaticInformation(pokemonTermSearch);
 };
 
-export default PokemonPage;
+export default withPokemonByIdData(PokemonPage);

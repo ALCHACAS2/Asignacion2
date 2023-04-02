@@ -1,4 +1,9 @@
 import React, { useRef } from "react";
+import { PokemonListResponse } from "../../interfaces/pokemon-list";
+import { getStaticInformation } from "../../utils/getStaticInformation";
+import { GetStaticPaths } from "next";
+import { GetStaticProps } from "next";
+
 export const Search = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const handleClick = () => {
@@ -6,7 +11,7 @@ export const Search = () => {
     if (!pokemonId) return alert("Primero digite un numero de pokemon a buscar");
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`).then((response) => {
       if (response.ok) {
-        window.open(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`, "_blank");
+        window.open(``, "_blank");
       } else {
         throw new Error("No se pudo abrir la página");
       }
