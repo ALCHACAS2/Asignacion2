@@ -16,21 +16,21 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
     router.push(`/pokemon/name/${name}`);
   };
   return (
-    <Grid xs={6} sm={3} md={2} xl={1} key={id}>
-      <Card isHoverable isPressable data-testid={`pokemon-card-${id}`}>
-        <Card.Body css={{ p: 1 }}>
-          <Card.Image src={img} width="100%" height={140} data-testid={`pokemon-card-image-${id}`}></Card.Image>
-        </Card.Body>
-        <Card.Divider />
-        <Card.Footer>
-          <Row justify="space-between">
-            <Text transform="capitalize" data-testid={`pokemon-card-link-name-${id}`}>
+    <div>
+      <div>
+        <div>
+          <img src={img} width="100%" height={140} data-testid={`pokemon-card-image-${id}`}></img>
+        </div>
+        <div />
+        <footer>
+          <div>
+            <h3>
               {name}
-            </Text>
-            <Text data-testid={`pokemon-card-link-id-${id}`}>#{id}</Text>
-          </Row>
-        </Card.Footer>
-      </Card>
-    </Grid>
+            </h3>
+            <p>#{id}</p>
+          </div>
+        </footer>
+      </div>
+    </div>
   );
 };

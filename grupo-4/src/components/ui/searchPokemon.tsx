@@ -32,6 +32,11 @@ export const Search = () => {
         type="text"
         placeholder="Ingresa el numero de pokemon a buscar"
         id="search"
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
+            handleClick();
+          }
+        }}
       />
       <button onClick={handleClick}>Search</button>
     </div>
