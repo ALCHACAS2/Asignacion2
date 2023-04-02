@@ -5,7 +5,7 @@ import { pokeApi } from "../../../api";
 import { Pokemon } from "../../../interfaces";
 import { PokemonListResponse } from "../../../interfaces/pokemon-list";
 import { getStaticInformation } from "../../../utils/getStaticInformation";
-import  withData  from "../withGetStaticProps";
+
 interface PokemonProps {
   pokemon: Pokemon;
 }
@@ -24,11 +24,11 @@ export const getStaticPaths: GetStaticPaths = async (_ctx) => {
     fallback: "blocking",
   };
 };
-const withPokemonData = withData("name");
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { name: pokemonTermSearch } = params as { name: string };
 
   return await getStaticInformation(pokemonTermSearch);
 };
 
-export default withPokemonData(PokemonByNamePage);
+export default PokemonByNamePage;
