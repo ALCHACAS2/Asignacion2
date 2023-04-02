@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { SmallPokemon } from "../../interfaces";
+import Image from 'next/image';
 
 import { Grid, Card, Row, Text } from "@nextui-org/react";
 import { useRouter } from "next/router";
@@ -16,21 +17,16 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
     router.push(`/pokemon/name/${name}`);
   };
   return (
-    <div>
-      <div>
-        <div>
-          <img src={img} width="100%" height={140} data-testid={`pokemon-card-image-${id}`}></img>
-        </div>
-        <div />
-        <footer>
-          <div>
-            <h3>
-              {name}
-            </h3>
-            <p>#{id}</p>
-          </div>
+    <main>
+      <div className="">
+        <figure>
+          <Image src={img} width={100} height={140} alt={`Imagen de ${name}`} data-testid={`pokemon-card-image-${id}`}></Image>
+        </figure>
+        <footer className="display-flex">
+            <h3>{name}</h3>
+            <h3>#{id}</h3>
         </footer>
       </div>
-    </div>
+    </main>
   );
 };
