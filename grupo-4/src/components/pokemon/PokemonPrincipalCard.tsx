@@ -15,8 +15,8 @@ export const PokemonPrincipalCard: NextPage<PokemonProps> = ({ pokemon }) => {
         <Grid xs={12} sm={4}>
           <Card isHoverable css={{ padding: "30px" }} data-testid={`pokemon-card`}>
             <Card.Body>
-              <Card.Image src={pokemon.sprites.other?.dream_world.front_default || "/no-image.png"} alt={pokemon.name} width="100%" height={200} data-testid={`pokemon-card-image`} />
-            </Card.Body>
+            <Card.Image src={pokemon.sprites.other?.dream_world.front_default || "/no-image.png"} alt={pokemon.name} width="100%" height={200} data-testid={`pokemon-card-image`} />
+             </Card.Body>
           </Card>
         </Grid>
 
