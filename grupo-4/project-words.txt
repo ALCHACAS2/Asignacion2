@@ -2,6 +2,9 @@ abrir
 ANDERS
 buscar
 digite
+espalda
+Foto
+Frente
 hola
 Ingresa
 Ingrese
