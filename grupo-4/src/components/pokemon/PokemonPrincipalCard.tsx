@@ -15,7 +15,7 @@ export const PokemonPrincipalCard: NextPage<PokemonProps> = ({ pokemon }) => {
         <div>
           <div>
             <main>
-              <Image src={pokemon.sprites.other?.dream_world.front_default || "/no-image.png"} alt={pokemon.name} />
+              <Image src={pokemon.sprites.other?.dream_world.front_default || "/no-image.png"} alt={pokemon.name}  width={100} height={100}> </Image>
             </main>
           </div>
         </div>
@@ -28,10 +28,10 @@ export const PokemonPrincipalCard: NextPage<PokemonProps> = ({ pokemon }) => {
             <main>
               <h2>Sprites:</h2>
               <div>
-                <Image src={pokemon.sprites.front_default} alt={pokemon.name} width={100} height={100} />
-                <Image src={pokemon.sprites.back_default} alt={pokemon.name} width={100} height={100} />
-                <Image src={pokemon.sprites.front_shiny} alt={pokemon.name} width={100} height={100} />
-                <Image src={pokemon.sprites.back_shiny} alt={pokemon.name} width={100} height={100} />
+                <Image src={pokemon.sprites.front_default} alt={pokemon.name} width={100} height={100}> </Image>
+                <Image src={pokemon.sprites.back_default} alt={pokemon.name} width={100} height={100} ></Image>
+                <Image src={pokemon.sprites.front_shiny} alt={pokemon.name} width={100} height={100} ></Image>
+                <Image src={pokemon.sprites.back_shiny} alt={pokemon.name} width={100} height={100} ></Image>
               </div>
             </main>
           </div>

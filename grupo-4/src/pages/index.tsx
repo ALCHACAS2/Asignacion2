@@ -26,7 +26,8 @@ const HomePage: NextPage<Props> = ({ pokemons }) => {
   return (
     <>
       <Layout title="Listado de Pokémons">
-        <div>
+        <div className="bg-blue-200 grid  grid-cols-2 sm:grid-cols-4 lg:grid-cols-8">
+        
           {pokemons && pokemons.map((pokemon) => <PokemonCard key={pokemon.id} pokemon={pokemon} />)}
           {newPokemons.length > 0 && newPokemons?.map((pokemon: SmallPokemon) => <PokemonCard key={pokemon.id} pokemon={pokemon} />)}
         </div>
