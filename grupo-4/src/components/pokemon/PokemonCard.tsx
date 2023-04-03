@@ -7,7 +7,7 @@ interface Props {
 export const PokemonCard: FC<Props> = ({ pokemon }) => {
   const { id, name, img } = pokemon;
   return (
-    
+
 <main className="m-4 flex flex-col justify-center rounded-lg bg-gray-200 border-spacing-12">
   <div className="grid grid-rows-4 items-center">
     <figure className="row-span-3 items-center max-h-100 max-w-100">
@@ -20,6 +20,5 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
   </div>
 </main>
 
-  
   );
 };

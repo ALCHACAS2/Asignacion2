@@ -1,4 +1,3 @@
-import { log } from 'console';
 import { pokeApi } from '../api';
 import { Pokemon } from '../interfaces';
 
@@ -19,7 +18,6 @@ export async function getStaticInformation(pokemonTermSearch: string) {
     };
   } catch (error) {
     console.log(error);
-    
     return {
       redirect: {
         destination: '/',
