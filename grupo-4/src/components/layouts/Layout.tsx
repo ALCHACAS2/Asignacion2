@@ -20,7 +20,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({ children, title }) => {
         <meta property="og:image" content={`${origin}/img/banner.png`} />
       </Head>
       <Navbar/>
-      <main className="bg-blue-200">{children}</main>
+      <main className="bg-blue-200 min-h-full">{children}</main>
     </>
   );
 };

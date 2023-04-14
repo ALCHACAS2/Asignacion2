@@ -26,10 +26,10 @@ export const Search = () => {
   };
 
   return (
-    <div className="flex flex-row space-x-4 justify-self-end mr-8">
+    <div className="flex flex-row space-x-4 justify-self-end lg:mr-8 mr-2">
       <input
         ref={inputRef}
-        className="mt-2 h-10 form-input w-full px-3 py-2 rounded-md bg-white"
+        className=" lg:mt-2 lg:h-10 lg:w-40 h-6 form-input w-full px-3 py-2 rounded-md bg-white mt-0.5"
         type="text"
         placeholder="ID de pokemon a buscar"
         id="search"
@@ -45,11 +45,9 @@ export const Search = () => {
           }
         }}
       />
-      <button className=" mt-2 h-10 w-40 rounded-md bg-blue-800 mx-3" onClick={handleClick}>
+      <button className=" lg:mt-2 lg:h-10 lg:w-40  h-6 rounded-md bg-blue-800 mx-3 mt-0.5" onClick={handleClick}>
         Search
       </button>
     </div>
   );
 };
-//1010max
-//evitar letras en el input
